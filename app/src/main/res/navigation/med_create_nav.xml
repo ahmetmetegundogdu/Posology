@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/med_create_nav"
+    app:startDestination="@id/firstStepFragment">
+
+    <fragment
+        android:id="@+id/firstStepFragment"
+        android:name="com.gnd.posology.addmedicineform.FirstStepFragment"
+        android:label="fragment_first_step"
+        tools:layout="@layout/fragment_first_step" >
+        <action
+            android:id="@+id/action_firstStepFragment_to_secondStepFragment"
+            app:destination="@id/secondStepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondStepFragment"
+        android:name="com.gnd.posology.addmedicineform.SecondStepFragment"
+        android:label="fragment_second_step"
+        tools:layout="@layout/fragment_second_step" />
+</navigation>

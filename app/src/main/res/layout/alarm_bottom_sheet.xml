@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="600dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="Alarm Oluştur"/>
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"/>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:outlineProvider="bounds"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:hintAnimationEnabled="false"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:maxLines="1"
+                android:id="@+id/input_medicine_dose"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:hint="Birim"
+                android:textSize="15sp"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:id="@+id/unit_type_holder"
+            android:textStyle="bold"
+            android:text="unit"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/alarm_note_layout"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:outlineProvider="bounds"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:hintAnimationEnabled="false"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:maxLines="1"
+            android:id="@+id/input_alarm_note"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:hint="Alarm Notu"
+            android:textSize="15sp"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:layout_marginTop="20dp"
+        android:text="Tamamla"
+        android:elevation="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/set_med_alarm_btn"/>
+
+
+</LinearLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:layout_height="match_parent"
+    tools:context=".addmedicineform.FirstStepFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="350dp"
+
+        android:layout_height="wrap_content"
+        android:paddingVertical="40dp"
+        android:elevation="8dp"
+        android:background="@drawable/border_soft_white">
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/med_name_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/med_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineProvider="bounds"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:focusedSearchResultHighlightColor="@color/text"
+            android:textColorHint="@color/text"
+            app:hintTextColor="@color/text"
+            app:boxStrokeColor="@color/text"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:hintAnimationEnabled="false"
+            android:layout_marginHorizontal="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:maxLines="1"
+                android:id="@+id/med_name"
+                android:textColor="@color/text"
+                app:hintTextColor="@color/text"
+
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:hint="Name"
+                android:textSize="15dp"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/med_unit"
+            android:layout_margin="30dp"
+            android:inputType="none"
+            android:cursorVisible="false"
+            android:textColorHint="@color/text"
+            app:hintTextColor="@color/text"
+            app:boxStrokeColor="@color/text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/med_name_layout"
+            app:layout_constraintBottom_toTopOf="@id/date_input_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="200dp"
+            android:hint="Unit"
+            android:outlineProvider="bounds"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:hintAnimationEnabled="false"
+
+
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                app:hintTextColor="@color/text"
+
+                android:id="@+id/medicine_unit_menu"
+                android:layout_width="match_parent"
+                android:inputType="none"
+                android:cursorVisible="false"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/date_input_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColorHint="@color/text"
+            app:hintTextColor="@color/text"
+            app:boxStrokeColor="@color/text"
+            app:layout_constraintTop_toBottomOf="@id/med_unit"
+            app:layout_constraintBottom_toTopOf="@id/note_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:outlineProvider="bounds"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:hintAnimationEnabled="false"
+            android:layout_marginHorizontal="30dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:hint="Date Range"
+                app:hintTextColor="@color/text"
+
+                android:id="@+id/date_picker"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:clickable="false"
+                android:textSize="15dp"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColorHint="@color/text"
+            app:hintTextColor="@color/text"
+            app:boxStrokeColor="@color/text"
+            app:layout_constraintTop_toBottomOf="@id/date_input_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/note_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:outlineProvider="bounds"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:hintAnimationEnabled="false"
+            android:layout_margin="30dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/med_usage_note"
+                android:hint="Note"
+                android:text="Please "
+                android:textSize="15dp"
+                android:padding="15dp"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                app:hintTextColor="@color/text"
+
+                android:minLines="3"
+                android:maxLines="6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fragment_nav_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="20dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
